@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "title": "stationary",
+    "amount": 200,
+    "method": "online",
+    "description": "Stationary stuff",
+    "date": "2024-06-17"
+  },
+  {
+    "id": 2,
+    "title": "food",
+    "amount": 120,
+    "method": "cash",
+    "description": "Fast Food",
+    "date": "2024-06-17"
+  },
+  {
+    "id": 3,
+    "title": "medicine",
+    "amount": 200,
+    "method": "cash",
+    "description": "Aayurvedic medicine",
+    "date": "2024-06-17"
+  },
+  {
+    "id": 4,
+    "title": "Study",
+    "description": "Online course for webdev",
+    "amount": 569,
+    "method": "online",
+    "date": "2024-06-17"
+  },
+  {
+    "id": 5,
+    "title": "Food",
+    "description": "fast food",
+    "amount": 30,
+    "method": "online",
+    "date": "2024-06-17"
+  },
+  {
+    "id": 6,
+    "title": "Grocery",
+    "description": "weekly groceries",
+    "amount": 200,
+    "method": "cash",
+    "date": "2024-06-17"
+  },
+  {
+    "id": 7,
+    "title": "Movie",
+    "description": "Haikyuu",
+    "amount": 170,
+    "method": "online",
+    "date": "2024-06-18"
+  },
+  {
+    "id": 8,
+    "title": "Servicing",
+    "description": "Access Servicing",
+    "amount": 2000,
+    "method": "cash",
+    "date": "2024-06-18"
+  },
+  {
+    "id": 9,
+    "title": "Petrol",
+    "description": "Petrol for access",
+    "amount": 210,
+    "method": "cash",
+    "date": "2024-06-18"
+  },
+  {
+    "id": 10,
+    "title": "petrol",
+    "description": "petrol for access",
+    "amount": 210,
+    "method": "cash",
+    "date": "2024-06-06"
+  },
+  {
+    "id": 11,
+    "title": "petrol",
+    "description": "petrol for access",
+    "amount": 200,
+    "method": "cash",
+    "date": "2024-06-14"
+  },
+  {
+    "id": 12,
+    "title": "Wheat",
+    "description": "wheat mill",
+    "amount": 80,
+    "method": "cash",
+    "date": "2024-06-07"
+  },
+  {
+    "id": 13,
+    "title": "Food",
+    "description": "momos",
+    "amount": 60,
+    "method": "online",
+    "date": "2024-06-06"
+  },
+  {
+    "id": 14,
+    "title": "Food",
+    "description": "Dosa",
+    "amount": 210,
+    "method": "online",
+    "date": "2024-06-07"
+  },
+  {
+    "id": 15,
+    "title": "access",
+    "description": "oil change",
+    "amount": 300,
+    "method": "online",
+    "date": "2024-06-12"
+  },
+  {
+    "id": 16,
+    "title": "Food",
+    "description": "Fast food",
+    "amount": 200,
+    "method": "cash",
+    "date": "2024-06-21"
+  }
+]

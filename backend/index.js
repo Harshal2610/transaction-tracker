@@ -1,59 +1,42 @@
 const express = require("express");
-const fs = require("node:fs");
 const app = express();
+const transactionRouter = require("./routes/transRoutes");
+const dotenv = require("dotenv");
+const mongoose = require("mongoose");
+
+dotenv.config({ path: "./config.env" });
+
+// Api
 
 app.use(express.json());
 
-const transactions = JSON.parse(
-  fs.readFileSync(`${__dirname}/data/transactions.json`)
+app.use("/api/v1/transactions", transactionRouter);
+
+// server
+
+const DB = process.env.DATABASE.replace(
+  "<PASSWORD>",
+  process.env.DATABASE_PASSWORD
 );
 
-const getTransaction = (req, res) => {
-  res.status(200).json({
-    status: "sucess",
-    data: {
-      transactions,
-    },
-  });
-};
-
-const createTransaction = (req, res) => {
-  console.log(req.body);
-
-  const newId = transactions[transactions.length - 1].id + 1;
-  const newTrans = { id: newId, ...req.body };
-  transactions.push(newTrans);
-
-  fs.writeFile(
-    `${__dirname}/data/transactions.json`,
-    JSON.stringify(transactions),
-    (err) => {
-      res.status(201).json({
-        status: "success",
-        data: {
-          transactions: newTrans,
-        },
-      });
-    }
-  );
-};
-
-const deleteTransaction = (req, res) => {
-  console.log(req.params);
-  res.status(200).json({
-    status: "success",
-  });
-};
-
-app.route("/api/v1/transactions").get(getTransaction).post(createTransaction);
-app.route("/api/v1/transactions/:id").delete(deleteTransaction);
-
-app.get("/api/v1/users", (req, res) => {
-  res.status(200).json({
-    status: "sucess",
-    data: [{ user: "user1" }, { user: "user2" }, { user: "user3" }],
-  });
+mongoose.connect(DB).then(() => {
+  console.log("Connected to database sucessfully");
 });
+
+// For testing
+// const transSchema = new mongoose.Schema({
+//   title: String,
+//   amount: Number,
+// });
+
+// const Transaction = mongoose.model("Transaction", transSchema);
+
+// const testTrans = new Transaction({
+//   title: "Food",
+//   amount: 200,
+// });
+
+// testTrans.save().then((doc) => console.log(doc));
 
 const port = 3000;
 
